@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159-1.10a (Web2C 7.4.5) (format=pdflatex 2003.2.16)  9 MAR 2004 11:43
+This is pdfTeX, Version 3.14159-1.10a (Web2C 7.4.5) (format=pdflatex 2003.2.16)  21 APR 2004 18:22
 **main.tex
 (./main.tex{/usr/local/teTeX/share/texmf.local/pdftex/config/pdftex.cfg}
 LaTeX2e <2001/06/01>
@@ -292,118 +292,64 @@ Pictures in Paragraphs. Version 1.2a, July 13, 1993
 \waslice=\box44
 \wbslice=\box45
 \fslice=\box46
+) (/usr/local/teTeX/share/texmf/tex/latex/fancyhdr/fancyhdr.sty
+\headwidth=\dimen172
 )
 \c@thm=\count123
  (./main.aux)
 \openout1 = `main.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 87.
-LaTeX Font Info:    ... okay on input line 87.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 87.
-LaTeX Font Info:    ... okay on input line 87.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 87.
-LaTeX Font Info:    ... okay on input line 87.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 87.
-LaTeX Font Info:    ... okay on input line 87.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 87.
-LaTeX Font Info:    ... okay on input line 87.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 87.
-LaTeX Font Info:    ... okay on input line 87.
-LaTeX Font Info:    Try loading font information for U+msa on input line 87.
- (/usr/local/teTeX/share/texmf/tex/latex/amsfonts/umsa.fd
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 104.
+LaTeX Font Info:    ... okay on input line 104.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 104.
+LaTeX Font Info:    ... okay on input line 104.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 104.
+LaTeX Font Info:    ... okay on input line 104.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 104.
+LaTeX Font Info:    ... okay on input line 104.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 104.
+LaTeX Font Info:    ... okay on input line 104.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 104.
+LaTeX Font Info:    ... okay on input line 104.
+LaTeX Font Info:    Try loading font information for U+msa on input line 104.
+
+(/usr/local/teTeX/share/texmf/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2002/01/19 v2.2g AMS font definitions
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 87.
+LaTeX Font Info:    Try loading font information for U+msb on input line 104.
 
 (/usr/local/teTeX/share/texmf/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2002/01/19 v2.2g AMS font definitions
-) [1{/usr/local/teTeX/share/texmf/dvips/config/pdftex.map}] <xymatrix 4x5 535> 
-<xymatrix 2x2 171>
-<xymatrix 3x2 148> <xymatrix 5x1 178>
-Overfull \hbox (6.62874pt too wide) in paragraph at lines 167--169
-/cmr10/The first page $/cmmi10/B[]$ /cmr10/is iso-mor-phic to $/cmmi10/H[]/cmr1
-0/(/cmmi10/X/cmr10/; /msbm10/F[]/cmr10/)$ and the first dif-fer-en-tial $/cmmi1
-0/d[] /cmr10/= ([][])[]/cmmi10/@ /cmr10/=
+) [1{/usr/local/teTeX/share/texmf/dvips/config/pdftex.map}]
+Overfull \hbox (1.48633pt too wide) in paragraph at lines 154--155
+ /cmbx10/Ac-knowl-edge-ments.[] /cmr10/Fore-most I would like to thank my the-s
+is ad-vi-sor []
  []
 
+<xymatrix 5x1 158>
+
+Package Fancyhdr Warning: \headheight is too small (8.0pt): 
+ Make it at least 12.0pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
 [2] <xymatrix 4x1 120>
-Overfull \hbox (2.85342pt too wide) in paragraph at lines 187--191
+Overfull \hbox (2.85342pt too wide) in paragraph at lines 194--199
 /cmr10/mod-ules $[]$ where $/cmmi10/^^XH$ /cmr10/is the im-age of the /cmbx10/F
 robe-
  []
 
-<xymatrix 5x1 158>
-Overfull \hbox (33.23108pt too wide) has occurred while \output is active
- /cmr7/INTEGRAL COHOMOLOGY OF SPACES WITH AT MOST TWO NON-TRIVIAL HOMOTOPY GROU
-PS []
+<xymatrix 5x1 158> [3] <xymatrix 15x4 599> [4] <xymatrix 3x1 102> [5]
+<xymatrix 3x3 344> <xymatrix 3x2 152> [6] <xymatrix 3x1 102> <xymatrix 3x1
+102> <xymatrix 9x8 310> <xymatrix 2x1 44> [7] <xymatrix 2x3 288> <xymatrix 2x2
+181> <xymatrix 3x1 82> <xymatrix 2x1 44> [8] [9]
+Overfull \hbox (15.34691pt too wide) in paragraph at lines 665--666
+[]/cmr10/Thus $/cmmi10/Sq[]Sq[]x$ /cmr10/is de-com-pos-able since $/cmmi10/Q[]H
+[]/cmr10/(/cmmi10/K/cmr10/(/cmmi10/G; m/cmr10/); /msbm10/F[]/cmr10/) =
  []
 
-[3] <xymatrix 8x2 368> [4]
-Overfull \hbox (17.02823pt too wide) in paragraph at lines 250--251
-/cmbx10/Theorem. /cmti10/Let $/cmmi10/n /msam10/> /cmr10/1$ /cmti10/and $/cmmi1
-0/s /msam10/> /cmr10/1$/cmti10/. The dif-fer-en-tial graded $/cmsy10/A[]$/cmti1
-0/-algebra $/cmmi10/H[]/cmr10/(/cmmi10/K/cmr10/(/msbm10/Z/cmmi10/=/cmr10/2[]/cm
-mi10/; n/cmr10/); /msbm10/F[]/cmr10/)$
- []
-
-
-Overfull \hbox (2.52855pt too wide) in paragraph at lines 250--251
-/cmti10/is a con-nected, as-so-cia-tive, com-mu-ta-tive and prim-i-tively gen-e
-r-ated dif-fer-en-tial graded
- []
-
-<xymatrix 5x1 158> <xymatrix 15x4 599>
-Overfull \hbox (33.23108pt too wide) has occurred while \output is active
- /cmr7/INTEGRAL COHOMOLOGY OF SPACES WITH AT MOST TWO NON-TRIVIAL HOMOTOPY GROU
-PS []
- []
-
-[5]
-Overfull \hbox (2.02919pt too wide) in paragraph at lines 359--360
-/cmr10/ca-tions for more gen-eral H-spaces. More pre-cisely, the fact that $/cm
-mi10/x /cmsy10/2 /cmmi10/P [] H[]/cmr10/(/cmmi10/X/cmr10/; /msbm10/F[]/cmr10/)$
-
- []
-
-[6] <xymatrix 3x1 102>
-Overfull \hbox (33.23108pt too wide) has occurred while \output is active
- /cmr7/INTEGRAL COHOMOLOGY OF SPACES WITH AT MOST TWO NON-TRIVIAL HOMOTOPY GROU
-PS []
- []
-
-[7] <xymatrix 3x3 344> <xymatrix 3x2 152> [8] <xymatrix 3x1 102>
-Overfull \hbox (33.23108pt too wide) has occurred while \output is active
- /cmr7/INTEGRAL COHOMOLOGY OF SPACES WITH AT MOST TWO NON-TRIVIAL HOMOTOPY GROU
-PS []
- []
-
-[9] <xymatrix 3x1 102> <xymatrix 9x8 310> <xymatrix 2x1 44> <xymatrix 2x3 288>
-<xymatrix 2x2 181> <xymatrix 3x1 82> [10] <xymatrix 2x1 44> <xymatrix 2x1 54>
-<xymatrix 2x1 54>
-Overfull \hbox (33.23108pt too wide) has occurred while \output is active
- /cmr7/INTEGRAL COHOMOLOGY OF SPACES WITH AT MOST TWO NON-TRIVIAL HOMOTOPY GROU
-PS []
- []
-
-[11] [12]
-Overfull \hbox (3.34691pt too wide) in paragraph at lines 730--732
-/cmr10/Thus $/cmmi10/Sq[]Sq[]x$ /cmr10/is de-com-pos-able since $/cmmi10/Q[]H[]
-/cmr10/(/cmmi10/K/cmr10/(/cmmi10/G; m/cmr10/); /msbm10/F[]/cmr10/) =
- []
-
-
-Overfull \hbox (33.23108pt too wide) has occurred while \output is active
- /cmr7/INTEGRAL COHOMOLOGY OF SPACES WITH AT MOST TWO NON-TRIVIAL HOMOTOPY GROU
-PS []
- []
-
-[13] <xymatrix 4x1 150> <xymatrix 9x8 310> [14]
-Overfull \hbox (33.23108pt too wide) has occurred while \output is active
- /cmr7/INTEGRAL COHOMOLOGY OF SPACES WITH AT MOST TWO NON-TRIVIAL HOMOTOPY GROU
-PS []
- []
-
-[15] <xymatrix 3x4 228> (./biblio.tex (./mrabbrev.tex)
+<xymatrix 4x1 150> [10] <xymatrix 3x1 82> <xymatrix 9x8 310> [11] [12]
+<xymatrix 3x4 228> (./biblio.tex (./mrabbrev.tex)
 Underfull \hbox (badness 1286) in paragraph at lines 43--44
 []/cmcsc10@8.0pt/A. Cl[]ement/cmr8/, /cmti8/In-te-gral co-ho-mol-ogy of fi-nite
  Post-nikov tow-ers/cmr8/, Ph.D. the-sis, Uni-ver-
@@ -415,46 +361,45 @@ Underfull \hbox (badness 1490) in paragraph at lines 43--44
 erdocuments/ /cmr8/and
  []
 
-) [16] (./main.aux) ) 
+) [13] (./main.aux) ) 
 Here is how much of TeX's memory you used:
- 8585 strings out of 95133
- 75708 string characters out of 1182973
- 321073 words of memory out of 1000001
- 11430 multiletter control sequences out of 10000+50000
- 13305 words of font info for 53 fonts, out of 500000 for 1000
+ 8690 strings out of 95133
+ 76800 string characters out of 1182973
+ 323189 words of memory out of 1000001
+ 11535 multiletter control sequences out of 10000+50000
+ 12065 words of font info for 49 fonts, out of 500000 for 1000
  315 hyphenation exceptions out of 1000
- 34i,19n,32p,906b,922s stack positions out of 1500i,500n,5000p,200000b,5000s
- 144 PDF objects out of 300000
+ 34i,19n,43p,901b,1019s stack positions out of 1500i,500n,5000p,200000b,5000s
+ 129 PDF objects out of 300000
  0 named destinations out of 131072
  0 words of extra memory for PDF output out of 65536
 {/usr/local/teTeX/share/texmf/dvips/tetex/09fbbfac.enc}</u
 sr/local/teTeX/share/texmf/fonts/type1/bluesky/cm/cmtt8.pfb></usr/local/teTeX/s
 hare/texmf/fonts/type1/bluesky/symbols/msam5.pfb></usr/local/teTeX/share/texmf/
-fonts/type1/bluesky/symbols/msam7.pfb>{/usr/local/teTeX/share/texmf/dvips/tetex
-/f7b6d320.enc}</usr/local/teTeX/share/texmf/fonts/type1/bluesky/cm/cmbx7.pfb></
-usr/local/teTeX/share/texmf/fonts/type1/bluesky/symbols/msbm7.pfb>{/usr/local/t
-eTeX/share/texmf/dvips/tetex/bbad153f.enc}</usr/local/teTeX/share/texmf/fonts/t
-ype1/bluesky/cm/cmsy5.pfb></usr/local/teTeX/share/texmf/fonts/type1/public/xypi
-c/xydash10.pfb>{/usr/local/teTeX/share/texmf/dvips/tetex/0ef0afca.enc}</usr/loc
-al/teTeX/share/texmf/fonts/type1/bluesky/cm/cmr5.pfb></usr/local/teTeX/share/te
-xmf/fonts/type1/public/xypic/xybtip10.pfb></usr/local/teTeX/share/texmf/fonts/t
-ype1/public/xypic/xyatip10.pfb>{/usr/local/teTeX/share/texmf/dvips/tetex/aae443
-f0.enc}</usr/local/teTeX/share/texmf/fonts/type1/bluesky/cm/cmmi5.pfb></usr/loc
-al/teTeX/share/texmf/fonts/type1/bluesky/cm/cmmi7.pfb></usr/local/teTeX/share/t
-exmf/fonts/type1/bluesky/cm/cmr7.pfb>{/usr/local/teTeX/share/texmf/dvips/tetex/
-74afc74c.enc}</usr/local/teTeX/share/texmf/fonts/type1/bluesky/cm/cmti8.pfb></u
-sr/local/teTeX/share/texmf/fonts/type1/bluesky/cm/cmti10.pfb></usr/local/teTeX/
-share/texmf/fonts/type1/bluesky/cm/cmsy10.pfb></usr/local/teTeX/share/texmf/fon
-ts/type1/bluesky/symbols/msam10.pfb></usr/local/teTeX/share/texmf/fonts/type1/b
-luesky/symbols/msbm10.pfb></usr/local/teTeX/share/texmf/fonts/type1/bluesky/cm/
-cmex10.pfb></usr/local/teTeX/share/texmf/fonts/type1/bluesky/cm/cmsy7.pfb></usr
-/local/teTeX/share/texmf/fonts/type1/bluesky/cm/cmmi10.pfb></usr/local/teTeX/sh
-are/texmf/fonts/type1/bluesky/cm/cmr10.pfb></usr/local/teTeX/share/texmf/fonts/
-type1/bluesky/symbols/msbm7.pfb></usr/local/teTeX/share/texmf/fonts/type1/blues
-ky/cm/cmsy6.pfb></usr/local/teTeX/share/texmf/fonts/type1/public/tt2001/fmex8.p
-fb></usr/local/teTeX/share/texmf/fonts/type1/bluesky/cm/cmsy8.pfb></usr/local/t
-eTeX/share/texmf/fonts/type1/bluesky/symbols/msam7.pfb></usr/local/teTeX/share/
-texmf/fonts/type1/bluesky/cm/cmmi8.pfb></usr/local/teTeX/share/texmf/fonts/type
-1/bluesky/cm/cmcsc10.pfb></usr/local/teTeX/share/texmf/fonts/type1/bluesky/cm/c
-mr8.pfb></usr/local/teTeX/share/texmf/fonts/type1/bluesky/cm/cmbx10.pfb>
-Output written on main.pdf (16 pages, 268279 bytes).
+fonts/type1/bluesky/symbols/msam7.pfb></usr/local/teTeX/share/texmf/fonts/type1
+/bluesky/symbols/msbm7.pfb>{/usr/local/teTeX/share/texmf/dvips/tetex/bbad153f.e
+nc}</usr/local/teTeX/share/texmf/fonts/type1/bluesky/cm/cmsy5.pfb>{/usr/local/t
+eTeX/share/texmf/dvips/tetex/aae443f0.enc}</usr/local/teTeX/share/texmf/fonts/t
+ype1/bluesky/cm/cmmi5.pfb>{/usr/local/teTeX/share/texmf/dvips/tetex/0ef0afca.en
+c}</usr/local/teTeX/share/texmf/fonts/type1/bluesky/cm/cmr5.pfb></usr/local/teT
+eX/share/texmf/fonts/type1/public/xypic/xybtip10.pfb></usr/local/teTeX/share/te
+xmf/fonts/type1/public/xypic/xyatip10.pfb></usr/local/teTeX/share/texmf/fonts/t
+ype1/bluesky/cm/cmmi7.pfb>{/usr/local/teTeX/share/texmf/dvips/tetex/f7b6d320.en
+c}</usr/local/teTeX/share/texmf/fonts/type1/bluesky/cm/cmr7.pfb>{/usr/local/teT
+eX/share/texmf/dvips/tetex/74afc74c.enc}</usr/local/teTeX/share/texmf/fonts/typ
+e1/bluesky/cm/cmti8.pfb></usr/local/teTeX/share/texmf/fonts/type1/bluesky/cm/cm
+ti10.pfb></usr/local/teTeX/share/texmf/fonts/type1/bluesky/cm/cmsy10.pfb></usr/
+local/teTeX/share/texmf/fonts/type1/bluesky/symbols/msam10.pfb></usr/local/teTe
+X/share/texmf/fonts/type1/bluesky/symbols/msbm10.pfb></usr/local/teTeX/share/te
+xmf/fonts/type1/bluesky/cm/cmex10.pfb></usr/local/teTeX/share/texmf/fonts/type1
+/bluesky/cm/cmsy7.pfb></usr/local/teTeX/share/texmf/fonts/type1/bluesky/cm/cmmi
+10.pfb></usr/local/teTeX/share/texmf/fonts/type1/bluesky/cm/cmr10.pfb></usr/loc
+al/teTeX/share/texmf/fonts/type1/bluesky/symbols/msbm7.pfb></usr/local/teTeX/sh
+are/texmf/fonts/type1/bluesky/cm/cmsy6.pfb></usr/local/teTeX/share/texmf/fonts/
+type1/public/tt2001/fmex8.pfb></usr/local/teTeX/share/texmf/fonts/type1/bluesky
+/cm/cmsy8.pfb></usr/local/teTeX/share/texmf/fonts/type1/bluesky/symbols/msam7.p
+fb></usr/local/teTeX/share/texmf/fonts/type1/bluesky/cm/cmmi8.pfb></usr/local/t
+eTeX/share/texmf/fonts/type1/bluesky/cm/cmcsc10.pfb></usr/local/teTeX/share/tex
+mf/fonts/type1/bluesky/cm/cmr8.pfb></usr/local/teTeX/share/texmf/fonts/type1/bl
+uesky/cm/cmbx10.pfb>
+Output written on main.pdf (13 pages, 237974 bytes).
