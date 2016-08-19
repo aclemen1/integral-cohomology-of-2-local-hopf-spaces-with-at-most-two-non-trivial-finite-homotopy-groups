@@ -1,0 +1,96 @@
+%-----------------------------------------------------------------------------
+% Beginning of READ-P-L.ME
+%-----------------------------------------------------------------------------
+
+                    AMERICAN MATHEMATICAL SOCIETY
+                          201 Charles Street
+                   Providence, RI  02904-2294  USA
+
+
+AMS BOOK PROCEEDINGS STYLE PACKAGE
+----------------------------------
+
+This package contains files to help authors use AMS-LaTeX to prepare a
+proceedings article for publication at the AMS.  We assume that the
+following software is installed on the user's system.
+
+    LaTeX           version 2e, December 1995 or later
+    AMS-LaTeX       version 2.0, December 1999 or later
+    AMSFonts        version 2.0, January 1995 or later
+
+We also assume that the user is familiar with LaTeX and AMS-LaTeX document
+structuring commands such as \section, \footnote, \newtheorem, etc., and
+with the techniques for inputting math expressions.
+
+1) This package contains the following files.
+
+general files
+
+    READ-P-L.ME            overview of book proceedings package (this file)
+    instr-l.pdf            Instructions
+    handbk.pdf             AMS Author Handbook
+    creating-graphics.pdf  Creating graphics for use in AMS books and journals
+
+documentclass files
+
+    *-l.cls         publication-specific documentclass file
+
+sample paper file
+
+    article.tex     book proceedings sample paper
+
+additional files
+
+    article.top     book proceedings topmatter template
+    *-l.sup         supplementary instructions
+
+(where "*" represents the specific series code)
+
+2) Start by printing or viewing the files instr-l.pdf and handbk.pdf.
+instr-l is an instruction manual for using the package.  handbk is an
+author's handbook which includes a check list to be consulted, before
+keyboarding your manuscript, in order to avoid the most common problems,
+and detailed instructions for submitting your article to the AMS.
+
+3) Print out, or open on screen, the file creating-graphics.pdf and read
+it.  This file contains general and specific guidelines for preparation of
+graphics (line art, photographs, and other forms of illustrations) in a
+manner that will ensure their accurate reproduction in print and on-line.
+
+4) By default, the "sample paper file" listed above uses the basic AMS
+proceedings article style, amsproc.cls.
+
+Modify the \documentclass{amsproc} line in this file to refer to the
+specific publication header and then LaTeX it, in order to view the
+printed style for that particular series.  For example, if you are
+preparing a manuscript for the CONM series, BEFORE you LaTeX the files,
+replace amsproc with conm-p-l (i.e., \documentclass{conm-p-l}).
+
+5) Two files are listed above under "additional files". 
+
+The *-l.sup file contains supplementary instructions specific to each
+series.  You must read this file thoroughly before starting to create an
+electronic manuscript.  Although the instructions listed in instr-l
+apply to most series, some series have unique environments and/or special
+instructions necessary to that particular style.  Instructions in the
+.sup file always override any similar instructions in instr-l.
+
+Article.top is a topmatter template file that can be inserted in a new
+document to facilitate the startup process.  Be sure to change the
+\documentclass{amsproc} line to refer to the specific publication,
+and follow other instructions that appear as comments in the file.
+
+
+Should you have any technical questions, please contact our Technical
+Support Group.  The most effective method is to send electronic mail
+to tech-support@ams.org, including a concise statement of the problem,
+along with (if appropriate) a brief file that illustrates the problem and
+the log of your attempt to LaTeX the file.  If e-mail is not an option,
+you can call 800-321-4AMS (800-321-4267, in the U.S. or Canada) or
+401-455-4080, or write to Technical Support, Publications Technical Group,
+AMS, 201 Charles Street, Providence, RI 02904-2294.
+
+[2004/09/10, read-p-l.me]
+%-----------------------------------------------------------------------------
+% End of READ-P-L.ME
+%-----------------------------------------------------------------------------

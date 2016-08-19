@@ -1,0 +1,550 @@
+\documentclass{conm-p-l}
+
+\usepackage{amssymb}
+\usepackage[all]{xy}
+
+\newtheorem{thm}{Theorem}[section]
+\newtheorem*{mainthm*}{Main Theorem}
+\newtheorem{lem}[thm]{Lemma}
+\newtheorem{prop}[thm]{Proposition}
+\newtheorem{cor}[thm]{Corollary}
+
+\theoremstyle{definition}
+\newtheorem{defn}[thm]{Definition}
+\newtheorem*{conv*}{Convention}
+\newtheorem{conj}[thm]{Conjecture}
+\newtheorem{quest}[thm]{Question}
+\newtheorem{exmp}[thm]{Example}
+
+\DeclareMathOperator{\id}{id}
+\DeclareMathOperator{\map}{map}
+\DeclareMathOperator{\even}{^{even}}
+\DeclareMathOperator{\degst}{deg_{st}}
+\DeclareMathOperator{\coker}{coker}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\F}{\mathbb{F}}
+\newcommand{\A}{\mathcal{A}}
+\renewcommand{\geq}{\geqslant}
+\renewcommand{\leq}{\leqslant}
+
+\begin{document}
+
+\title[Int. Coh. of $2$-Loc. $H$-Spaces with Two Non-Triv. Finite Homotopy Gr.]{Integral Cohomology of $2$-Local Hopf Spaces with\\ at Most Two Non-Trivial Finite Homotopy Groups}
+
+\author{Alain Cl\'ement}
+\address{Institute of Mathematics, Faculty of Sciences, University of Lausanne}
+\curraddr{Alain~Cl\'ement\\ Louis-Meyer 9\\ CH-1800 Vevey\\ Switzerland}
+\email{clement.alain@mac.com}
+
+\subjclass[2000]{Primary 57T25; Secondary 55P20, 55S45}
+\keywords{Homology of ${H}$-spaces; Postnikov systems, $k$-invariants}
+
+\date{August 24, 2004 and, in revised form, May 25, 2005.}
+
+\copyrightinfo{2005}{American Mathematical Society}
+
+\begin{abstract}
+In this paper we prove that a non-contractible simply-connected $2$-local ${H}$-space $X$ with at most two non-trivial finite homotopy groups has no homology exponent, i.e. no exponent $e\geq1$ such that $e\cdot\widetilde{H}^*(X;\Z)=0$.
+\end{abstract}
+
+\maketitle
+
+\section{Introduction}
+
+Let $X$ be a connected topological space having the homotopy type of a\break CW-complex. One can both consider its graded homotopy group $\pi_*(X)$ and its graded reduced integral cohomology group $\widetilde{H}^*(X;\Z)$. If an integer $h\geq1$ such that $h\cdot\pi_*(X)=0$ exists, then we say that $X$ has a {\it homotopy exponent}. Analogously, if an integer $e\geq1$ such that $e\cdot \widetilde{H}^*(X;\Z)=0$ exists, then we say that $X$ admits a {\it homology exponent}.
+
+A general question asked by D.~Arlettaz suggests to explore the relationships between homotopy exponents and homology exponents. For instance, is it true that a space with a homotopy exponent has a homology exponent, too? In this case, how are these two exponents related? Or conversely, is it possible for a space without a homotopy exponent to admit a homology exponent?
+
+In this paper, we focus on simply-connected $2$-local ${H}$-spaces with one or two non-trivial finite homotopy groups. Such a space obviously admits a homotopy exponent. Our main result is the following:
+
+\begin{mainthm*}
+Let $X$ be a non-contractible simply-connected $2$-local ${H}$-space with at most two non-trivial finite homotopy groups. Then $X$ has no homology exponent.
+\end{mainthm*}
+
+The result when $X$ is an Eilenberg-Mac\,Lane space is a well-known consequence of the calculations of H. Cartan \cite{Ca55}, see Corollary \ref{c:GEM_no_exp}. More elaborated techniques are required to prove the result when $X$ has two non-trivial homotopy groups. Section \ref{s:transverse} establishes some preparations and investigates the situation of Eilenberg-Mac\,Lane spaces in detail. Some interesting examples are completely carried out in Section \ref{s:examples} and a proof of the main theorem is given in Section \ref{s:proofs}. We conclude the paper with some questions and comments in Section \ref{s:generalizations}.
+
+Unless otherwise specified, a {\bf space} will mean a pointed, connected and simple topological space with the homotopy type of a CW-complex of finite type. We will denote by $K(G,n)$ the {\bf Eilenberg-Mac\,Lane space} with a single non-trivial homotopy group isomorphic to $G$ in dimension $n$ ($G$~abelian if $n\geq2$). 
+
+Since we will only consider simple spaces $X$, we will only deal with abelian fundamental groups and it will always be possible to consider the {\bf Postnikov tower} built up from the {\bf Postnikov sections} of $X$ which will be denoted by $\alpha_n:X\longrightarrow X[n]$ and the {\bf $k$-invariants} $k^{n+1}(X)\in H^{n+1}(X[n-1];\pi_n X)\cong[X[n-1],K(\pi_n X,n+1)]$.
+
+\subsection*{Acknowledgements}
+
+I would like to thank my thesis advisor \hbox{D.~Arlettaz} for the help that he provided to me all along my studies and for the suggestions that he brought to this paper. I am also indebted to \hbox{J.~Scherer} and \hbox{C.~Casacuberta} for their support during my thesis work. I am very grateful to \hbox{K.~Hess-Belwald} for her support and finally I would like to thank the referee who read this paper.
+
+\section{Transverse implications}\label{s:transverse}
+
+In this introductory section we collect some well-known results that we need later in the paper, in particular results regarding the cohomology of $2$-local Eilenberg-Mac\,Lane spaces.
+
+A non-empty finite sequence of positive integers $I=(a_0,\dots,a_k)$, where $k$ is varying, is {\bf admissible} if $a_i\geq2a_{i+1}$ for all $0\leq i\leq k-1$. Let $\mathcal S$ be the set of all such admissible sequences. The {\bf stable degree} is a map $\degst:{\mathcal S}\to\N$ defined by $\degst(I)=\sum_{i=0}^k a_i$ for all $I=(a_0,\dots,a_k)\in{\mathcal S}$. The stable degree induces a {\bf grading} on the set $\mathcal S$ of all admissible sequences. The {\bf excess} is a map $e:{\mathcal S}\to\N$ defined by $e(I)=2a_0-\degst(I)=a_0-\sum_{i=1}^k a_i$ for all $I=(a_0,\dots,a_k)\in{\mathcal S}$.
+
+Let $n\geq1$ and $s\geq1$. Let $\delta_s$ the connecting homomorphism in the long exact sequence of coefficients in cohomology associated to the short exact sequence
+$$\xymatrix{0\ar[r] &\Z/2\ar[r] &\Z/2^{s+1}\ar[r] &\Z/2^s\ar[r] &0}.$$ 
+Consider the fundamental class $\iota_n\in H^n(K(\Z/2^s,n);\Z/2^s)$ and its mod-$2$ reduction $u_n\in H^n(K(\Z/2^s,n);\F_2)$. 
+\begin{conv*}
+Let $I=(a_0,\dots,a_k)$ be an admissible sequence. We will write $Sq^I_s u_n$ instead of $Sq^{a_0}\dots Sq^{a_{k-1}}\delta_s\iota_n$ (usually denoted by $Sq^{a_0,\dots,a_{k-1}}\delta_s\iota_n$) if $a_k=1$ and instead of $Sq^{a_0}\dots Sq^{a_k} u_n$ (also denoted by $Sq^{a_0,\dots,a_k} u_n$ or $Sq^I u_n$) if $a_k\not=1$. In particular, since $\delta_1=Sq^1$ and the reduction is the identity when $s=1$, we have $Sq^I_1 u_n=Sq^I u_n$.
+\end{conv*}
+
+J.-P.~Serre \cite{Se53} computed the mod-$2$ cohomology of Eilenberg-Mac\,Lane spaces and stated the following result:
+
+\begin{thm}
+Let $n\geq1$ and $s\geq1$. The graded $\F_2$-algebra $H^*(K(\Z/2^s,n);\F_2)$ is isomorphic to the graded polynomial $\F_2$-algebra on generators $Sq^I_s u_n$, where $I$ covers all the admissible sequences of excess $e(I)<n$ and $u_n$ is the reduction of the fundamental class (see the above convention). The degree of a generator $Sq^I_s u_n$ is $\deg(Sq^I_s u_n)=\degst(I)+n$. 
+\end{thm}
+
+This result also reveals the $\A_2$-algebra structure of $H^*(K(\Z/2^s,n);\F_2)$, where $\A_2$ denotes the mod-$2$ Steenrod algebra. 
+
+It is well known that an Eilenberg-Mac\,Lane space associated with an abelian group has a unique ${H}$-space structure up to homotopy (which can be seen as inherited from the loop space structure or from the addition law of the associated abelian group). Therefore, the differential graded $\A_2$-algebra $H^*(K(\Z/2^s,n);\F_2)$ is also a differential graded Hopf algebra. If $H$ is a {\bf graded Hopf algebra} over the field $\F_2$, with multiplication $\mu:H\otimes H\to H$, comultiplication $\Delta:H\to H\otimes H$, augmentation $\epsilon:H\to\F_2$ and unit $\eta:\F_2\to H$ ($\F_2$ is concentrated in degree zero, see \cite{MM65} for the definitions), the {\bf augmentation ideal} of $H$ will be denoted by
+$$
+\bar{H}=\ker\epsilon:H\to\F_2,
+$$ the graded module of {\bf indecomposable} elements of $H$ by
+\begin{align*}
+QH&=\bar{H}/\mu(\bar{H}\otimes\bar{H})\\
+&=\coker \mu:\bar{H}\to\bar{H}\otimes\bar{H}
+\end{align*}
+and the graded module of {\bf primitive} elements of $H$ by
+\begin{align*}
+PH&=\{x\in\bar{H}\ |\ \Delta(x)=x\otimes1+1\otimes x\}\\
+&=\ker \Delta:\bar{H}\to\bar{H}\otimes\bar{H}.
+\end{align*}  
+The {\bf Milnor-Moore theorem}\label{t:Milnor-Moore} states that there is an exact sequence of graded modules
+$\xymatrix{
+0\ar[r] &P(\xi H)\ar[r] &PH\ar[r] &QH,
+}$ where $\xi H$ is the image of the {\bf Frobenius map} $\xi:x\mapsto x^2$. The Hopf algebra $H$ is said to be {\bf primitively generated} if $PH\to QH$ in the above exact sequence is an epimorphism.
+
+\medskip
+J.-P. Serre also proved the following key result in \cite{Se53}:
+
+\begin{thm}
+The differential graded $\A_2$-algebra $H^*(K(\Z/2^s,n);\F_2)$ is a connected, associative, commutative and primitively generated differential graded Hopf algebra for any integer $n\geq1$ and any integer $s\geq1$.
+\end{thm}
+
+It is now easy to determine the modules of primitives and indecomposables of $H^*=H^*(K(\Z/2^s,n);\F_2)$. The module of indecomposable elements is clearly given by
+$$
+QH^*\cong\F_2\{Sq^I_s u_n\ |\ \text{$I$ admissible and $e(I)<n$}\}.
+$$
+Since $H^*$ is primitively generated, the Milnor-Moore theorem gives the following short exact sequence of graded $\F_2$-vector spaces:
+$$\xymatrix{
+0\ar[r] &P(\xi H^*)\ar[r] &PH^*\ar[r] &QH^*\ar[r] &0.
+}$$ Therefore, every indecomposable element is primitive and every primitive element which is decomposable is a square of a primitive element. Thus we have
+$$
+PH^*\cong\F_2\{(Sq^I_s u_n)^{2^i}\ |\ \text{$I$ admissible, $e(I)<n$ and $i\geq0$}\}.
+$$
+
+Now let us present some concepts and results on the high torsion in the integral cohomology of Eilenberg-Mac\,Lane spaces associated with $2$-torsion groups of finite type. The material exposed here can be found with all the details in my thesis work \cite{Cl02-PhD}. It is mainly inspired by the work of H. Cartan in \cite{Ca55}. 
+
+\medskip
+Let us start with the following key definition:
+
+\begin{defn}
+Let $X$ be a space and $\{B^*_r,d_r\}$ be its mod-$2$ cohomology Bockstein spectral sequence $B_1^*\cong H^*(X;\F_2)\Longrightarrow (H^*(X;\Z)/\text{torsion})\otimes\F_2$. Let $n$ and $r$ be two positive integers. An element $x\in B^n_r$ is said to be {\bf $\ell$-transverse} if $d_{r+l}x^{2^l}\not=0\in B^{2^l n}_{r+l}$ for all $0\leq l\leq\ell$. An element $x\in B^n_r$ is said to be \mbox{\bf $\infty$-transverse}, or simply {\bf transverse}, if it is $\ell$-transverse for all $\ell\geq0$. We will also speak of {\bf transverse implications} of an element $x\in B^n_r$.
+\end{defn}
+
+For instance, suppose that $x\in B_1^2$ is $\infty$-transverse and let us picture how the transverse implications of $x$ look like within the Bockstein spectral sequence:
+
+$$\xymatrix@C=0.2cm@R=0.5truecm{
+B_3^* &&\ar@{.}[rrrrrrrr] & & & & & & & &x^4\ar@/^0.4truecm/[r]^-{d_3} &\bullet\ar@{.}[rr] & &  &\dots\\
+B_2^* &&\ar@{.}[rrrr] & & & &x^2\ar@/^0.4truecm/[r]^-{d_2} &\bullet\ar@{.}[rrrrrr] & & & & & &  &\dots\\
+B_1^* &&\ar@{.}[rr] & &x\ar@/^0.4truecm/[r]^-{d_1} &\bullet\ar@{.}[rrrrrrrr] & & & & & & & & &\dots\\
+{*}&&0 &1 &2 &3 &4 &5 &6 &7 &8 &9 &10 &11 &\dots
+}$$
+
+Every transverse element gives rise to $2$-torsion of arbitrarily high order in the integral cohomology of $X$. Actually, our strategy for disproving the existence of a homology exponent for a space will consist in exhibiting a transverse element in its mod-$2$ cohomology Bockstein spectral sequence. 
+
+In the special case of Eilenberg-Mac\,Lane spaces, we have the following result:
+
+\begin{prop}\label{p:transversity}
+Let $G$ be a non-trivial $2$-local abelian group of finite type \mbox{isomorphic} to $\Z_{(2)}^{\times s}\oplus\Z/2^{s_1}\oplus\dots\oplus\Z/2^{s_l}$ and let $n\geq2$. Consider the Eilenberg-Mac\,Lane space $K(G,n)$ and its mod-$2$ cohomology Bockstein spectral sequence $\{B^*_r,d_r\}$. Suppose that one of the following assumptions holds:
+\begin{itemize}
+\item[$\bullet$]{$n$ is even and $x\in B^n_{s_j}$ is $0$-transverse for any $1\leq j\leq l$,}
+\item[$\bullet$]{$x\in P\even B_1^*$ is $0$-transverse ($Sq^1x\not=0$).}
+\end{itemize}
+Then $x$ is $\infty$-transverse.
+\end{prop}
+
+A proof is given in \cite[Theorem 1.3.2]{Cl02-PhD}.
+
+An algorithm explicitly computing the integral cohomology groups of such $K(G,n)$ spaces is implemented within a C++ program in \cite{Cl02-EMM}: the {\it Eilenberg-Mac\,Lane machine}. For instance, the machine produces a table for $K(\Z/2,2)$ whose part in low degrees is: 
+
+\medskip
+\begin{tabular}{|c|p{3cm}|p{8cm}|}
+\hline
+$n$ &$H^n(K(\Z/2,2);\Z)$ &$H^n(K(\Z/2,2);\F_2)$ \\
+\hline
+
+$0$%
+&$\Z$
+&$\F_2$\\
+
+$1$%
+&$(0)$%
+&$(0)$\\
+
+$2$%
+&$(0)$%
+&$\F_2\{u_2\}$\\
+
+$3$%
+&$\Z/2$%
+&$\F_2\{Sq^1u_2\}$\\
+
+$4$%
+&$(0)$%
+&$\F_2\{u_2^2\}$\\
+
+$5$%
+&$\Z/2^{2}$%
+&$\F_2\{Sq^{2,1}u_2,u_2Sq^1u_2\}$\\
+
+$6$%
+&$\Z/2$%
+&$\F_2\{u_2^3,(Sq^1u_2)^2\}$\\
+
+$7$%
+&$\Z/2$%
+&$\F_2\{u_2Sq^{2,1}u_2,u_2^2Sq^1u_2\}$\\
+
+$8$%
+&$\Z/2$%
+&$\F_2\{u_2^4,u_2(Sq^1u_2)^2,Sq^1u_2Sq^{2,1}u_2\}$\\
+
+$9$%
+&$\Z/2\oplus\Z/2^{3}$%
+&$\F_2\{Sq^{4,2,1}u_2,u_2^2Sq^{2,1}u_2,u_2^3Sq^1u_2,(Sq^1u_2)^3\}$\\
+
+\hline
+\end{tabular}
+\medskip
+
+The elements of order $2$, $4$ and $8$ in degrees $3$, $5$ and $9$ respectively are given by an $\infty$-transverse element: the characteristic class $u_2\in H^2(K(\Z/2,2);\F_2)$ -- which is of even degree and $0$-transverse -- and its iterated squares $u_2^2$ and $u_2^4$.
+
+Let us remark that a $0$-transverse implication does not imply $\infty$-transverse implications in general. More precisely, the fact that $x\in P\even H^*(X;\F_2)$ is such that $Sq^1x\not=0$ does not always force $x$ to be $\infty$-transverse. A counter-example is given by $X=BSO$ and $x=w_2$, the second Stiefel-Withney class in $H^2(BSO;\F_2)$.
+
+As a corollary of Proposition \ref{p:transversity}, it is then possible to give a proof of our main result for Eilenberg-Mac\,Lane spaces:
+
+\begin{cor}\label{c:GEM_no_exp}
+Let $G$ be a non-trivial finite $2$-torsion abelian group and let \mbox{$n\geq2$}. The Eilenberg-Mac\,Lane space $K(G,n)$ has no homology exponent.
+\end{cor}
+
+\begin{proof}
+Accordingly to the K\"unneth formula, it is sufficient to establish the result when $G=\Z/2^s$ for some $s\geq1$. If $n$ is even, consider the reduction of the fundamental class $u_n\in H^n(K(\Z/2^s,n);\F_2)$. This class survives to $B^n_s$ and is $0$-transverse. Then $u_n\in B^n_s$ is $\infty$-transverse. If $n$ is odd, consider the admissible sequence $(2,1)$. Its excess is exactly $1$ and therefore $Sq^{2,1}_s u_n\in P\even H^*(K(\Z/2,n);\F_2)$ when $n\geq3$. Moreover we have $Sq^1Sq^{2,1}_s u_n=Sq^{3,1}_s u_n$ by Adem relations, which means that $Sq^{2,1}_s u_n$ is $0$-transverse. Hence $Sq^{2,1}_s u_n\in B^{n+3}_1$ is $\infty$-transverse.
+\end{proof}
+
+Let us conclude this section by proving the following crucial observation which states that the $\infty$-transverse implications of an element in the cohomology of the total space of a fibration can be read in the cohomology of the fibre. 
+
+\begin{lem}
+Let $j:F\to X$ be a continuous map. If $x\in H^*(X;\F_2)$ is such that $j^*(x)\not=0\in H^*(F;\F_2)$ is $\infty$-transverse, then $x$ itself is $\infty$-transverse.
+\end{lem}
+
+\begin{proof}
+Suppose that $x$ is not $\infty$-transverse. Then there exists $r\geq0$ such that $d_{r+1}x^{2^r}=0$. Therefore we have $d_{r+1}j^*(x)^{2^r}=d_{r+1}j^*(x^{2^r})=j^*d_{r+1}x^{2^r}=0$, since $d_{r+1}x^{2^r}=0$, which contradicts $\infty$-transversity of $j^*(x)$.
+\end{proof}
+
+\section{Examples}\label{s:examples}
+
+Let us consider now $2$-local spaces with two non-trivial finite homotopy groups. Recall that we want to prove that they do not have a homology exponent. This section will be devoted to two interesting examples. 
+
+\medskip
+\begin{exmp}\label{e:retract}
+If such a space $X$ retracts onto an Eilenberg-Mac\,Lane space, then it is a easy to deduce that $X$ has no homology exponent. This is for instance the case for the space $X$ given by the fibration
+$$\xymatrix{
+X\ar[r]^-i &K(\Z/2,2)\times K(\Z/2,2)\ar[r]^-k &K(\Z/2,4),
+}$$
+where its single non-trivial $k$-invariant
+\begin{align*}
+k \in& [K(\Z/2,2)\times K(\Z/2,2),K(\Z/2,4)]\\
+\cong &H^4(K(\Z/2,2)\times K(\Z/2,2);\F_2)\\
+\cong &H^4(K(\Z/2,2);\F_2)\otimes\F_2\\
+&\oplus H^2(K(\Z/2,2);\F_2)\otimes H^2(K(\Z/2,2);\F_2)\\
+&\oplus\F_2\otimes H^4(K(\Z/2,2);\F_2)\\
+\cong &\F_2\{u_2^2\otimes1,u_2\otimes v_2,1\otimes v_2^2\}
+\end{align*}
+is given by $k=u_2\otimes v_2$ where $u_2$ and $v_2$ are the fundamental classes of both copies of $K(\Z/2,2)$. The space $X$ has only two non-trivial homotopy groups $\pi_2(X)\cong\Z/2\oplus\Z/2$ and $\pi_3(X)\cong\Z/2$.
+
+\begin{prop}\label{p:retract}
+The space $X$ of Example \ref{e:retract} has the following properties:
+\begin{itemize}
+\item[1.]{$X$ is not a GEM (i.e. a weak product of Eilenberg-Mac\,Lane spaces),}
+\item[2.]{$X$ is not a ${H}$-space,}
+\item[3.]{$X$ retracts (weakly) onto the Eilenberg-Mac\,Lane space $K(\Z/2,2)$, i.e. there exist maps $f:X\to K(\Z/2,2)$ and $g:K(\Z/2,2)\to X$ such that $fg\simeq\id_{K(\Z/2,2)}$,}
+\item[4.]{$f^*:H^*(K(\Z/2,2);\F_2)\to H^*(X;\F_2)$ is a monomorphism,}
+\item[5.]{$X$ has no homology exponent.}
+\end{itemize}
+\end{prop}
+
+\begin{proof}
+The space $X$ is clearly not a GEM nor a ${H}$-space. 
+
+Consider the following homotopy commutative diagram based on the fibration for which $X$ is the fibre:
+$$\xymatrix{
+&X\ar[d]^i\ar@/^/[rd]^f\\
+K(\Z/2,2)\ar[r]^-{i_1}\ar@/^/@{.>}[ru]^g\ar@/_/[rd]_{*} &K(\Z/2,2)\times K(\Z/2,2)\ar[r]^-{p_1}\ar[d]^k &K(\Z/2,2)\\
+&K(\Z/2,4),
+}$$ where $i_1$ denotes the inclusion into the first factor, $p_1$ denotes the projection onto the first factor and $f=p_1i$. The existence of a (generally not unique) map $g$ is a consequence of the fact that $k i_1\simeq*$. To see that $k i_1\simeq*$, recall first that the isomorphism $[K(\Z/2,2),K(\Z/2,4)]\cong H^4(K(\Z/2,2);\F_2)$ maps $ki_1$ to $(ki_1)^*(u_4)$, where $(ki_1)^*=(i_1)^*k^*:H^4(K(\Z/2,4);\F_2)\to H^4(K(\Z/2,2);\F_2)$ and $u_4\in H^4(K(\Z/2,4);\F_2)$ is the fundamental class. Now we have $(i_1)^*k^*(u_4)=(i_1)^*(u_2\otimes v_2)=(i_1)^*(u_2\otimes1\cdot1\otimes v_2)=(i_1)^*(u_2\otimes1)\cdot(i_1)^*(1\otimes v_2)=0$, since $(i_1)^*(1\otimes v_2)=0$. Therefore $fg\simeq \id$ and the result follows.
+\end{proof}
+
+\medskip
+One can relate this space with other examples pointed out by F.~R.~Cohen and F.~P.~Peterson in \cite{CP00}. They constructed loop maps $\Omega g:\Omega Y\to K(\Z/2,n)$, $n\geq2$, with the property that $(\Omega g)^*:H^*(K(\Z/2,n);\F_2)\to H^*(\Omega Y;\F_2)$ is a monomorphism and such that $\Omega g$ does not admit a section. 
+
+Their examples are mainly provided by $\Omega\Sigma(\R P^\infty)^n\to K(\Z/2,n)$, the canonical multiplicative extension of Serre's map $e:(\R P^\infty)^n\to K(\Z/2,n)$, and by $\Omega\Sigma BSO(3)\to K(\Z/2,2)$, the canonical multiplicative extension of the second Stiefel-Whitney class in the mod-$2$ cohomology of $BSO(3)$ in the case $n=2$.
+
+The spaces $\Sigma(\R P^\infty)^n$ and $\Sigma BSO(3)$ have infinitely many non-trivial homotopy groups. Our space $X$ has only two. However, the loop maps $\Omega g:\Omega Y\to K(\Z/2,n)$ of F. R. Cohen and F. P. Peterson and our map $f:X\to K(\Z/2,2)$ all induce monomorphisms.
+\end{exmp}
+
+\begin{exmp}\label{e:no_retract}
+Let us now consider a more interesting example of $2$-local space with two non-trivial homotopy groups which does not admit a retract onto an Eilenberg-Mac\,Lane space. Therefore we will not be able to use the topological argument of the proof of Proposition \ref{p:retract} in order to prove the non-existence of a homology exponent. The main idea here is to detect $\infty$-transverse implications.
+
+Let $X$ be the space given by the fibration
+$$\xymatrix{
+X\ar[r]^-i &K(\Z/2,2)\ar[r]^-k &K(\Z/2,4),
+}$$
+where its single non-trivial $k$-invariant
+\begin{align*}
+k \in& [K(\Z/2,2),K(\Z/2,4)]\\
+\cong &H^4(K(\Z/2,2);\F_2)\\
+\cong &\F_2\{u_2^2\}
+\end{align*}
+is given by $k=u_2^2$ where $u_2$ is the fundamental class of $K(\Z/2,2)$. The space $X$ has only two non-trivial homotopy groups $\pi_2(X)\cong\Z/2\cong\pi_3(X)$.
+
+\begin{prop}\label{p:no_retract}
+The space $X$ of Example \ref{e:no_retract} has the following properties:
+\begin{itemize}
+\item[1.]{$X$ is not a GEM,}
+\item[2.]{$X$ is an infinite loop space,}
+\item[3.]{$X$ retracts neither onto the Eilenberg-Mac\,Lane space $K(\Z/2,2)$, nor onto $K(\Z/2,3)$,}
+\item[4.]{However, $X$ has no homology exponent.}
+\end{itemize}
+\end{prop}
+
+\begin{proof}
+The space $X$ is clearly not a GEM. It is an infinite loop space since its $k$-invariant $u_2^2$ is in the image of the $n$-fold cohomology suspension for all $n$. 
+
+In order to show that $X$ does retract neither onto $K(\Z/2,2)$, nor onto $K(\Z/2,3)$, let us consider the mod-$2$ cohomology Serre spectral sequence of the fibration $\xymatrix{K(\Z/2,3)\ar[r]^-j &X\ar[r]^-i &K(\Z/2,2)}$. 
+The $E_2$-term looks like:
+$$\xymatrix@R=0.1cm@C=0.1cm{
+&&\\
+{Sq^1u_3}  &&0 &{*} &{*} &{*} &{*} &{*}\\
+{u_3}  &&0 &u_2u_3&{*} &{*} &{*} &{*}\\
+{0} &&0 &0 &0 &0 &0 &0\\
+{0} &&0 &0 &0 &0 &0 &0\\ \ar@{-}[rrrrrrrr] &&&&&&&&\\
+{1} &\ar@{-}[uuuuuu] &{0} &{u_2} &{Sq^1u_2} &{u_2^2} &{Sq^{2,1}u_2} &{u_2^3}\\
+&&&&&&{u_2Sq^1u_2} &{(Sq^1 u_2)^2}
+}$$
+
+We have $H^2(X;\F_2)\cong\F_2\{v\}$ with $u_2\mapsto v$ via the composition
+$$
+i^*:\xymatrix{H^2(K(\Z/2,2);\F_2)\cong E^{2,0}_2\ar@{->>}[r] &E^{2,0}_3\cong E^{2,0}_\infty\cong H^2(X;\F_2)}.
+$$ 
+
+The Serre's transgression theorem (see for instance \cite[Theorem 6.8, p. 189]{Mc00}) implies that $d_4$ coincides with the transgression which is given by the $k$-invariant. In other words we have $d_4u_3=k^*(u_4)=u_2^2$. Therefore $\bigoplus_{s}E_\infty^{s,3-s}\cong E_\infty^{3,0}$ and $H^3(X;\F_2)\cong\F_2\{w\}$ with $Sq^1u_2\mapsto w$ via the composition
+$$
+i^*:\xymatrix{H^*(K(\Z/2,2);\F_2)\cong E_2^{3,0}\ar@{->>}[r] &E_3^{3,0}\ar@{->>}[r] &E_4^{3,0}\cong E_\infty^{3,0}\cong H^3(X;\F_2)}.
+$$ 
+We clearly have $Sq^1v=w$.
+
+Suppose that there are maps $f:X\to K(\Z/2,2)$ and $g:K(\Z/2,2)\to X$ with $fg\simeq \id_{K(\Z/2,2)}$. The only non-trivial map $f:X\to K(\Z/2,2)$ is given by the single non-trivial element $v\in H^2(X;\F_2)$. This forces $f\simeq i$. Therefore we have $kig\simeq k\id_{K(\Z/2,2)}\simeq k$ which contradicts the fact that $ki\simeq *$.
+
+Suppose now that there are maps $f:X\to K(\Z/2,3)$ and $g:K(\Z/2,3)\to X$ with $fg\simeq \id_{K(\Z/2,3)}$. The only non-trivial map $f:X\to K(\Z/2,3)$ is given by the single non-trivial element $w\in H^3(X;\F_2)$. Therefore we have $g^*f^*(u_3)=g^*(w)=g^*(Sq^1v)=Sq^1g^*(v)=0$, since $g^*(v)\in H^2(K(\Z/2,3);\F_2)=0$. In other words, we always have $fg\simeq*$ and $X$ cannot retract onto $K(\Z/2,3)$.
+
+Since $u_3$ transgresses to $u_2^2$, $Sq^1u_3$ transgresses to $Sq^1u_2^2$ which vanishes by Cartan's formula. Therefore $Sq^1u_3\not=0\in E_\infty^{0,4}$ and there exists $x'\in H^4(X;\F_2)$ such that $x'\mapsto Sq^1u_3$ via the composition
+$$
+j^*:\xymatrix{H^4(X;\F_2)\ar@{->>}[r] &E^{0,4}_\infty\cong E^{0,4}_6\subset\dots\subset E^{0,4}_2\cong H^4(K(\Z/2,3);\F_2)}.
+$$ Set $x=Sq^2x'$. We have $j^*(x)=j^*(Sq^2x')=Sq^2j^*(x')=Sq^{2,1}u_3$ which is $\infty$-transverse. Thus $x$ is also $\infty$-transverse and $X$ cannot admit a homology exponent. 
+\end{proof}
+\end{exmp}
+
+\section{Proof of the main result}\label{s:proofs}
+
+This section is devoted to the proof of our main result. We begin to sketch a strategy allowing us to reach our aim.
+
+\medskip
+\subsection*{Strategy}
+In Example \ref{e:no_retract}, we found an element $x$ in the mod-$2$ cohomology of $X$ such that its image in the cohomology of the fibre $j^*(x)=Sq^{2,1}u_3$ is non-trivial and has $\infty$-transverse implications; this imply for $x$ itself to have $\infty$-transverse implications and prevents the existence of a homology exponent. Let us consider each of these stages in the general setting of a space $X$ with two non-trivial homotopy groups:
+\begin{itemize}
+\item[(A)]{Every non-trivial element in $E_2^{0,*}$ which survives to $E_\infty^{0,*}$ gives rise to an element $x\in H^*(X;\F_2)$ with a non-trivial image $j^*(x)$ in the cohomology of the fibre. This leads us to find an element in $E_2^{0,*}$ which transgresses to zero. The fact that transgressions in the spectral sequence commute with the Steenrod squares is very valuable for our purpose (J.-P. Serre remarked that the transgressions also commute with the connecting homomorphism $\delta_s$ introduced in Section \ref{s:transverse}, see \cite[p. 206]{Se53} and \cite[p. 457]{Se51}). For instance, the reduction of the characteristic class $u_n\in E_2^{0,n}$ transgresses to a primitive element $w$ determined by the $k$-invariant. Therefore, the first step will be done if we can find an admissible sequence $I$ such that $Sq^I_s u_n\not=0$ transgresses to $Sq^I_s w=0$.}
+\item[(B)]{Among all the admissible sequences $I=(a_0,\dots)$ of excess $e(I)<n$ such that $Sq^I_s u_n\not=0$ transgresses to zero, some of them are interesting because they insure on one hand that the element $Sq^I_s u_n$ has a $0$-transverse implication in the cohomology of the fibre and on the other hand that $Sq^I_s u_n$ lies in even degree. We have seen in Proposition \ref{p:transversity} that these two conditions force $Sq^I_s u_n$ to have $\infty$-implications. It is immediate to see that such an admissible sequence ``begins'' with an even $a_0$ and has stable degree $\degst(I)\equiv n$ (mod $2$).}
+\end{itemize}
+
+Let us look at the $\A_2$-action on the primitive elements of the cohomology of the base space. Following (A), our aim here is to find a suitable admissible sequence. Consider the following definition:
+
+\begin{defn}
+For all $l\geq1$ define the admissible sequence $$\xi(l)=(2^l+2^{l-1}-1,\dots,5,2)$$ of stable degree $\degst(\xi(l))=2^{l+1}+2^l-l-3$ and excess $e(\xi(l))=l+1$.
+\end{defn}
+
+\begin{prop}\label{p:action}
+Let $m\geq2$ and let $G$ be a $2$-torsion finite abelian group and consider the $\A_2$-module of primitives $P^*H^*(K(G,m);\F_2)$. Let $n\geq m+1$. Then we have
+$$
+\begin{cases}
+Sq^2P^5H^*(K(G,2);\F_2)=0.\\
+Sq^3P^6H^*(K(G,3);\F_2)=0.\\
+Sq^{3}P^{n+1}H^*(K(G,m);\F_2)=0 &\text{if $n=m+1\geq4$.}\\
+Sq^{\xi(n-3)}P^{n+1}(K(G,m);\F_2)=0 &\text{if $n\geq m+2$.}
+\end{cases}
+$$
+\end{prop}
+
+\begin{proof}
+Since $G$ is a $2$-torsion finite abelian group, we can write $G\cong\oplus_a\Z/2^{s_a}$. 
+
+Suppose that $n=m+1=3$. Let $i_2\in H^2(K(G,2);G)$ be the characteristic class and consider the elements $\iota_{2,a}\in H^2(K(G,2);\Z/2^{s_a})$ induced by the projections of $G$ on each of the factors $\Z/2^{s_a}$. Let $x\in P^5H^*(K(G,2);\F_2)$. There exists an element $y\in H^3(K(G,2);\F_2)$ of the form $y=\sum\delta_s\iota_{2,s}$ and such that $x=Sq^2y$. We have $Sq^2x=Sq^2Sq^2y=Sq^{3,1}y=\sum Sq^{3,1}\delta_s\iota_{2,s}=0$ since $Sq^1\delta_s=0$ for all $s$.
+
+Suppose that $n=m+1=4$ and let $x\in P^6H^*(K(G,3);\F_2)$. There exists $y\in H^3(K(G,3);\F_2)$ such that $x=y^2$. We then have $Sq^3x=Sq^3y^2=0$ by Cartan's formula.
+
+Suppose that $n=m+1\geq4$ and let $x\in P^{m+2}H^*(K(G,m);\F_2)$. There exists $y\in H^m(K(G,m);\F_2)$ such that $x=Sq^2y$. We then have $Sq^3 x=Sq^3Sq^2y=0$ by Adem relations.
+
+Finally suppose that $n\geq m+2$. For all $m\geq2$ define the following subsets of the integers:
+\begin{align*}
+M^m &=\{2^i+2^{i-1}\ |\ \text{for all $i\geq m$}\} \text{ and}\\
+N^m &=\{1+2^{h_1}+\dots+2^{h_{m-1}}\ |\ h_1\geq\dots\geq h_{m-1}\geq0\}.
+\end{align*}
+It is a very simple arithmetic game to see that $M^m\cap N^m=\emptyset$. Careful calculations show that for all admissible sequence $I$, we have $e(I)<m$ if and only if $\degst(I)+m\in N^m$. Thus there is no admissible sequence $I$ of excess $e(I)<m$ such that $\degst(I)+m=2^{\geq m}+2^{\geq m-1}$. Therefore
+$$
+Q^{2^{\geq m}+2^{\geq m-1}}H^*(K(G,m);\F_2)=0.
+$$
+Let $x\in P^{n+1}H^*(K(G,m);\F_2)$. We have
+\begin{align*}
+\deg(Sq^{2^{n-3}+2^{n-4}-2}Sq^{\xi(n-4)}x) = &\ \deg(x) + \degst(\xi(n-4)) + (2^{n-3}+2^{n-4}-2)\\
+= &\ 2^{n-2}+2^{n-3}.
+\end{align*}
+
+Since $Q^{2^{n-2}+2^{n-3}}H^*(K(G,m);\F_2)=0$ when $n\geq m+2$, the primitive element $Sq^{2^{n-3}+2^{n-4}-2}Sq^{\xi(n-4)}x$ is then decomposable. Thus it is a square (maybe trivial) by Milnor-Moore. Therefore 
+\begin{align*}
+Sq^{\xi(n-3)}x &= Sq^{2^{n-3}+2^{n-4}-1}Sq^{\xi(n-4)}x\\
+&=Sq^1Sq^{2^{n-3}+2^{n-4}-2}Sq^{\xi(n-4)}x\\
+&=Sq^1(\text{square}) =0.
+\end{align*}
+
+\end{proof}
+
+We are now able to prove the main theorem.
+
+\begin{thm}\label{t:main}
+Let $X$ be a non-contractible simply-connected $2$-local ${H}$-space with at most two non-trivial finite homotopy groups. Then $X$ has no homology exponent.
+\end{thm}
+
+\begin{proof}
+Since the case of an Eilenberg-Mac\,Lane space is clear, let us assume that $X$ is a non-contractible simply-connected $2$-local ${H}$-space with exactly two non-trivial homotopy groups $\pi_m(X)\cong G$ and $\pi_n(X)\cong H$, where $n>m\geq2$ and $G\cong\oplus_a\Z/2^{s_a}$, $H\cong\oplus_b\Z/2^{t_b}$ are finite groups. 
+
+The space $X$ fits into the fibrations
+$$\xymatrix{
+K(H,n)\ar[r]^-j &X\ar[r]^-i &K(G,m)\ar[r]^-k &K(H,n+1),
+}$$
+where $k$ is its single $k$-invariant. Since $X$ is a ${H}$-space, $k$ is a $H$-map.
+
+Let $i_m\in H^2(K(G,m);G)$ be the characteristic class and consider the elements $\iota_{m,a}\in H^m(K(G,m);\Z/2^{s_a})$ induced by the projections of $G$ on each factor $\Z/2^{s_a}$. Consider also all the $u_{m,a}\in H^m(K(G,m);\F_2)$ given by the reduction mod $2$ of the $\iota_{m,a}$'s.
+
+Analogously, let $j_n\in H^n(K(H,n);H)$ be the characteristic class and consider the elements $\jmath_{n,b}\in H^n(K(H,n);\Z/2^{t_b})$ induced by the projections of $H$ on each factor $\Z/2^{t_b}$. Consider also all the $v_{n,b}\in H^n(K(H,n);\F_2)$ given by the reduction mod $2$ of the $\jmath_{n,b}$'s. Moreover, pick $(t,v_n,\jmath_n)$ among $\{(t_b,v_{n,b},\jmath_{n,b})\ |\ \text{for all $b$}\}$.
+
+The $E_2$-term of the Serre spectral sequence of the fibration $$\xymatrix{K(H,n)\ar[r]&X\ar[r]&K(G,m)}$$ looks like:
+$$\xymatrix@R=0.1cm@C=0.1cm{
+&&\\
+{\delta_t\jmath_n,*}  &&0 &\dots &0 &{*} &{*} &{*}\\
+{v_n,*}  &&0 &\dots &0 &{*} &{*} &{*}\\
+{0} &&0 &\dots &0 &0 &0 &0\\
+{\vdots} &&\vdots & &\vdots &\vdots &\vdots &\vdots\\
+{0} &&0 &\dots &0 &0 &0 &0\\ \ar@{-}[rrrrrrrr] &&&&&&&&\\
+{1} &\ar@{-}[uuuuuu] &{0} &{\dots} &{0} &{*} &{*} &{*}}
+$$
+
+The element $v_n$ transgresses to $d_{n+1}v_n$ in $P^{n+1}H^*(K(G,m);\F_2)$ which is determined by the $k$-invariant. Set 
+$$
+\xi=\begin{cases}
+(2,1) &\text{if $m=2$ and $n=3$,}\\
+(6,3,1) &\text{if $m=3$ and $n=4$,}\\
+(6,3) &\text{if $n=m+1\geq5$ and $n$ is odd,}\\
+(14,7,3) &\text{if $n=m+1\geq6$ and $n$ is even,}\\
+(2^{n-2}+2^{n-3}-2,\xi(n-3)) &\text{if $n\geq m+2\geq4$.}\\
+\end{cases}
+$$
+
+In all cases $e(\xi)<n$, $\deg(Sq^\xi_t v_n)$ is even and $Sq_{t}^\xi v_n$ transgresses to $Sq_t^\xi d_{n+1}v_n$ which is trivial by Proposition \ref{p:action}. Let $x\in H^*(X;\F_2)$ such that $j^*(x)=Sq_t^\xi v_n$. The element $Sq_t^\xi v_n$ is $\infty$-transverse and so is $x$.
+\end{proof}
+
+\section{Generalizations}\label{s:generalizations}
+
+We conclude this paper with some possible generalizations of our main result.
+
+The first generalization in which we are interested concerns the nature of the two non-trivial homotopy groups of $X$. We supposed them to be finite. Let us now suppose that the homotopy groups of $X$ are of finite type. Copies of $\Z_{(2)}$, which have no torsion, may appear in this extended context. 
+
+The cohomology of Eilenberg-Mac\,Lane spaces associated to such groups was also computed by H. Cartan and J.-P. Serre:
+$$
+H^*(K(\Z_{(2)},n);\F_2)\cong\F_2[Sq^Iu_n\ |\ \text{$I=(a_0,...,a_k)$ with $a_k\not=1$ and $e(I)<n$}].
+$$
+We say that a space $X$ admits a {\bf torsion homology exponent} if there exists an exponent for the torsion subgroup of $H^*(X;\Z)$. With this definition, we have the following result on Eilenberg-Mac\,Lane spaces:
+
+\begin{prop}
+Let $G$ be a non-trivial $2$-torsion abelian group of finite type and $n\geq4$. The Eilenberg-Mac\,Lane space $K(G,n)$ has no torsion homology exponent.
+\end{prop}
+
+\begin{proof}
+By K\"unneth formula and Corollary \ref{c:GEM_no_exp}, it is sufficient to suppose $G=\Z_{(2)}$. Consider the reduction of the fundamental class $u_n\in H^n(K(\Z_{(2)},n);\F_2)$. If $n$ is even, then $Sq^{2}u_n$ is $\infty$-transverse. If $n$ is odd, then $Sq^{6,3}u_n$ is $\infty$-transverse. 
+\end{proof}
+
+It is not very difficult using results of H. Cartan in \cite{Ca55} to verify that $K(\Z_{(2)},2)$ and $K(\Z_{(2)},3)$ admit torsion homology exponents. So the result is the best possible in terms of connexity. The following result is an extension to spaces with at most two non-trivial homotopy groups of finite type:
+
+\begin{thm}\label{t:main2}
+Let $X$ be a non-contractible 3-connected $2$-local ${H}$-space of \mbox{finite} type with at most two non-trivial homotopy groups. Then $X$ has no torsion homology exponent.
+\end{thm}
+
+The strategy and the admissible sequences $\xi$ listed in the proof of Theorem \ref{t:main} are also suitable to prove Theorem \ref{t:main2}.
+
+\bigskip
+W. Browder proved in \cite[Theorem 6.11, p. 46]{Br61} that every ${H}$-space of finite type which has the homotopy type of a finite CW-complex and which is simply-connected is actually $2$-connected. Then, one may ask the following question.
+
+\begin{quest}
+Let $X$ be a simply-connected $2$-local ${H}$-space of finite type with a homology exponent. Is $X$ always $2$-connected? If it is not the case for all such ${H}$-spaces, is it true for infinite loop spaces?
+\end{quest}
+
+\bigskip
+In \cite{Le95} R. Levi studied the homotopy type of $p$-completed classifying spaces of the form $BG^\wedge_p$ for $G$ a finite $p$-perfect group, $p$ a prime. He constructed an algebraic analogue of Quillen's ``plus'' construction for differential graded coalgebras. He then proved that the loop spaces $\Omega BG^\wedge_p$ admit integral homology exponents. More precisely, he proved that if $G$ is a finite $p$-perfect group of order $p^r\cdot m$, $m$ prime to $p$, then
+$$
+p^r\cdot\widetilde{H}_*(\Omega BG^\wedge_p;\Z_{(p)})=0.
+$$
+Moreover, he proved that $BG^\wedge_p$ admits in general infinitely many non-trivial $k$-invariants, and thus in particular $\pi_*BG^\wedge_p$ is non-trivial in arbitrarily high dimensions. His method for proving this last result is based on a version of H. Miller's theorem improved by J. Lannes and L. Schwartz \cite{LS86}. This result and the results of the paper lead to the following conjecture:
+
+\begin{conj}\label{conj:conj}
+Let $X$ be a connected space. If $X$ has a homology exponent, then either $X\simeq K(\pi_1(X),1)$, or $X$ has infinitely many non-trivial $k$-invariants and, in particular, infinitely many non-trivial homotopy groups. 
+\end{conj}
+
+One can attack this conjecture by first looking at the following problem at the prime $2$:
+
+\begin{quest}
+Let $X$ be a $2$-local space (of finite type) and $G$ a finite $2$-torsion abelian group. If $X$ has a homology exponent, is the space $\map_*(K(G,2),X)$ weakly contractible?
+\end{quest}
+
+To see that an affirmative answer to this question implies Conjecture \ref{conj:conj} at the prime $2$, suppose that $X$ is a $2$-local space with a homology exponent and with finitely many non-trivial $k$-invariants. Then $X\simeq X[m]\times\text{GEM}$ for some integer $m$. Since $X$ admits a homology exponent it is a Postnikov piece. Consider then the Postnikov tower of the space $X\simeq X[m]$:
+$$\xymatrix@R=0.5cm{
+K(\pi_mX,m)\ar[r]^-j &X[m]\ar[d]\\
+&X[m-1]\ar[d]\ar[r]^-{k^{m+1}} &K(\pi_mX,m+1)\\
+&\vdots\ar[d]\\
+&K(\pi_1X,1).
+}$$ The map $j:K(\pi_m X,m)\to X[m]$ induces an isomorphism on the $m$-th homotopy groups. Therefore $\Omega^{m-2}j:K(\pi_m X,2)\to\Omega^{m-2}X[m]$ and its adjoint map $\Sigma^{m-2}K(\pi_m X,2)\to X[m]$, which belongs to $\pi_{m-2}\map_*(K(\pi_m X,2),X[m])$, are not nullhomotopic. This contradicts the fact that $\map_*(K(\pi_mX,2),X[m])$ is weakly contractible.
+
+\bibliographystyle{amsplain}
+\begin{thebibliography}{99}
+
+\bibitem{Br61}{\sc W. Browder}, \textit{Torsion in ${H}$-spaces}, Ann. of Math. 74 (1961), 24-51.
+
+\bibitem{Ca55}{\sc H. Cartan}, \textit{Alg\`ebres d'Eilenberg-MacLane et homotopie}, Expos\'es 2 \`a 16, S\'eminaire Henri Cartan, Ecole Normale Sup\'erieure, Paris, 1956. 
+
+\bibitem{Cl02-PhD}{\sc A. Cl\'ement}, \textit{Integral cohomology of finite Postnikov towers}, Ph.D. thesis, University of Lausanne, Switzerland, 2002. (See {\tt http://www.unil.ch/cyberdocuments/} and {\tt http://magma.epfl.ch/aclement})
+
+\bibitem{Cl02-EMM}{\sc A. Cl\'ement}, \textit{The Eilenberg-Mac\,Lane Machine, a C++ program that computes the integral cohomology of Eilenberg-Mac\,Lane spaces}, University of Lausanne, Switzerland, 1998-2002. (See {\tt http://www.unil.ch/cyberdocuments/} and {\tt http://magma.epfl.ch/aclement})
+
+\bibitem{CP00}{\sc F. R. Cohen and F. P. Peterson}, \textit{Some free modules over the cohomology of $K(Z/2Z,n)$: a short walk in the Alps}, in: Contemporary Mathematics 265 (2000), 7-20.
+
+\bibitem{LS86}{\sc J. Lannes and L. Schwartz}, \textit{\`A propos de conjectures de Serre et Sullivan}, Invent. Math. 83 (1986), 593-603.
+
+\bibitem{Le95}{\sc R. Levi}, \textit{On finite groups and homotopy theory}, Memoirs of the A.M.S. 567, vol. 118, 1995.
+
+\bibitem{Mc00}{\sc J. McCleary}, \textit{A user's guide to spectral sequences}, Cambridge studies in advanced mathematics 58, 2nd edition (Cambridge Univ. Press, 2000).
+
+\bibitem{MM65}{\sc J. W. Milnor and J. C. Moore}, \textit{On the structure of Hopf algebras}, Ann. of Math. 81 (1965), 211-264.
+
+\bibitem{Se51}{\sc J.-P. Serre}, \textit{Homologie singuli\`ere des espaces fibr\' es}, Ann. of Math. 54 (1951), 425-505.
+
+\bibitem{Se53}{\sc J.-P. Serre}, \textit{Cohomologie modulo $2$ des complexes d'Eilenberg-MacLane}, Comment. Math. Helv. 27 (1953), 198-232.
+
+\end{thebibliography}
+
+\end{document}
